@@ -1,8 +1,7 @@
 # Zadania na laboratorium
 
 ## Zadanie 1
-Zadanie 1
-Napisz funkcję, która dla dwóch obiektów reprezentujących daty kalendarza gregoriańskiego policzy ilość dni pomiędzy nimi. Przetestuj i zademonstruj.
+Napisz funkcję, która dla dwóch obiektów reprezentujących daty kalendarza gregoriańskiego policzy ilość dni pomiędzy nimi. Przetestuj i zademonstruj. <br>
 (*) Napisz teraz tę funkcję tak, aby wynik był otrzymywany przy pomocy odejmowania, tzn. jeżeli d oraz s są datami to wyrażenie d - s ma wartość równą ilości dni.
 
 ## Zadanie 2
