@@ -21,10 +21,9 @@ Classes were conducted by Dr. Łukasz Wojakowski.
 
 ## Features
 List of features ready and TODOs for future development
-* Solutions for some excercises
+* Solutions for all excercises
 
 To-do list:
-* Create solutions for all laboratories
 * Create comprehensive notes
 
 ## Status
