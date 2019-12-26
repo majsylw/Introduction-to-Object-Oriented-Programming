@@ -3,16 +3,16 @@
 ## Zadanie 1
 Uzupełnij klasę Trojmian z poprzedniej listy o unarne operatory ```+``` oraz ```-```, o operator ```*=``` pozwalający 
 na domnożenie trójmianu przez liczbę, o dwa operatory mnożenia ```*``` pozwalające na mnożenie trójmianu przez liczbę 
-z lewej i z prawej strony, o operator < definiujący porządek leksykograficzny (relacja przez niego określona 
+z lewej i z prawej strony, o operator ```<``` definiujący porządek leksykograficzny (relacja przez niego określona 
 na liczbach wymiernych jest Strict Weak Order, co więcej, klasy równoważności, o których była mowa na wykładzie, 
 są jednoelementowe, więc ta równoważność jest w istocie relacją równości), i wszystkie pozostałe 
 operatory porównywania ```>```, ```<=```, ```>=```, ```==```, ```!=``` zrealizuj bez osobnego liczenia 
 a jedynie poprzez stosowne wywoływanie operatora ```<```.
-Wyposaż klasę w metody pozwalające na znalezienie ilości zer danego trójmianu i ich obliczenie. 
+
+Wyposaż klasę w metody pozwalające na znalezienie liczby zer danego trójmianu i ich obliczenie. 
 Dobrze się zastanów ile trójmian może mieć zer. Do obliczania zastosuj wzory, 
 które gwarantują poprawność numeryczną, znajdziesz je w pracy 
-"What Every Computer Scientist Should Know About Floating Point Arithmetic", 
-do której odnośnik jest na stronie przedmiotu.
+"What Every Computer Scientist Should Know About Floating Point Arithmetic".
 
 Napisz funkcję testującą, która przynajmniej raz sprawdzi działanie każdej metody i funkcji.
 
@@ -38,7 +38,7 @@ o zadanym indeksie, oraz o metody obliczające przybliżenie pierwszej pochodnej
 pp(i)=(y<sub>i+1</sub>-y<sub>i-1</sub>)/(t<sub>i+1</sub>-t<sub>i-1</sub>)
 
 i drugiej (przyspieszenia) ze wzoru
-dp(i)=2((t<sub>i</sub>-t<sub>i-1</sub>)*(y<sub>i+1</sub>-y<sub>i</sub>) -(t<sub>i+1</sub>-t<sub>i</sub>)*(y<sub>i</sub>-y<sub>i-1</sub>))/(t<sub>i+1</sub>-t<sub>i-1</sub>)
+dp(i)=2((t<sub>i</sub>-t<sub>i-1</sub>)\*(y<sub>i+1</sub>-y<sub>i</sub>) -(t<sub>i+1</sub>-t<sub>i</sub>)\*(y<sub>i</sub>-y<sub>i-1</sub>))/(t<sub>i+1</sub>-t<sub>i-1</sub>)
 
 Oczywiście te dwie pochodne da się policzyć dla wszystkich punktów poza pierwszym i ostatnim.
 Wyposaż swoją kolekcję w możliwość zapisu do pliku w formacie rozdzielanym średnikami, 
