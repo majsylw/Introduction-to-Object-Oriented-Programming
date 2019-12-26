@@ -1,20 +1,6 @@
 /*
-Zdefiniuj klasê Zespolona modeluj¹c¹ liczbê zespolon¹. 
-Wyposa¿ j¹ w konstruktor domyœlny ustawiaj¹cy wartoœæ liczby na zero 
-oraz konstruktory przyjmuj¹ce jedn¹ lub dwie liczby zmiennoprzecinkowe 
-odpowiadaj¹ce czêœci rzeczywistej i czêœci urojonej (w razie podania tylko czêœci rzeczywistej przyjmujemy, 
-¿e urojona jest równa zero) oraz w metody:
-- Re zwracaj¹c¹ czêœæ rzeczywist¹ liczby,
-- Im zwracaj¹c¹ czêœæ urojon¹ liczby,
-- Abs zwracaj¹c¹ modu³ liczby,
-- Arg zwracaj¹c¹ argument (k¹t) liczby w radianach
-- Tekst zwracaj¹c¹ napis reprezentuj¹cy liczbê, o postaci a+bi (zamiast a i b stosowne wielkoœci)
-Wszystkie atrybuty obiektów typu Zespolona powinny byæ prywatne. Zastanów siê, czy przechowywanie jako atrybutów czêœci rzeczywistej i urojonej jest jedynym sposobem na zrealizowanie powy¿szego inferfejsu.
-
-Napisz operator wejœcia akceptuj¹cy liczby w formacie a+bi, pamiêtaj o sprawdzeniu, czy na pewno po czêœci urojonej wpisano 'i' oraz spróbuj sprawdziæ, czy na pewno pomiêdzy liczbami jest plus lub minus (tu mo¿e Ci siê przydaæ omawiany ju¿ na laboratoriach manipulator std::ws z biblioteki iomanip oraz metody strumienia peek albo unget zdefiniowane w klasie std::basic_istream i przy niej udokumentowane).
-Napisz operator wyjœcia korzystaj¹cy z metody Tekst.
-
-Napisz funkcjê testuj¹c¹ konstruktor i wszystkie metody i funkcje.
+Dopisz procedurê Sprzezenie, której argumentem bêdzie wskaŸnik do liczby zespolonej, i która zmodyfikuje wskazywan¹ liczbê 
+zmieniaj¹c j¹ na jej sprzê¿enie. Je¿eli wskaŸnik nie wskazuje na ¿adn¹ liczbê, procedura niczego nie zrobi.
 */
 
 #include <iostream>
@@ -153,8 +139,28 @@ void testy(void)
     std::cerr << "Klasa Zespolona pomyslnie przeszla testy \n";
 }
 
+void Sprzezenie(Zespolona *z)
+{
+    if(z != nullptr)
+    {
+        z->Im() = -z->Im();
+    }
+}
+
+auto test_Sprzezenie(void) -> void
+  {
+  Zespolona z(1.0,2.0);
+  Sprzezenie(&z);
+  assert(z.Re()==1.0);
+  assert(z.Im()==-2.0);
+  Sprzezenie(nullptr);  // nic nie robi, ale nie powinno powodowaæ bledu wykonania
+  std::cerr << "test_Sprzezenie ok\n";
+  }
+
+
 int main(void)
 {
+    test_Sprzezenie();
     testy();
 
     Zespolona k;

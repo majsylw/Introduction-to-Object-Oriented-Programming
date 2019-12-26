@@ -52,7 +52,7 @@ Zdefiniuj klasę Zespolona modelującą liczbę zespoloną. Wyposaż ją w konst
 - ```Re``` zwracającą część rzeczywistą liczby,
 - ```Im``` zwracającą część urojoną liczby,
 - ```Abs``` zwracającą moduł liczby,
-- ``Arg``` zwracającą argument (kąt) liczby w radianach
+- ```Arg``` zwracającą argument (kąt) liczby w radianach
 - ```Tekst``` zwracającą napis reprezentujący liczbę, o postaci a+bi (zamiast a i b stosowne wielkości)
 
 Wszystkie atrybuty obiektów typu Zespolona powinny być prywatne. Zastanów się, czy przechowywanie jako atrybutów części rzeczywistej i urojonej jest jedynym sposobem na zrealizowanie powyższego inferfejsu.
